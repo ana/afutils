@@ -34,7 +34,8 @@ from io import BytesIO, UnsupportedOperation
 from afutils import astring, path
 from afutils.wait import wait_for
 
-LOG = logging.getLogger(__name__)
+# Force logging name so it's below the avocado namespace
+LOG = logging.getLogger('avocado.' + __name__)
 
 #: The active wrapper utility script.
 CURRENT_WRAPPER = None
